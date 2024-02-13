@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom"
+import Heading from "../components/Heading"
+import SubHeading from "../components/SubHeading"
 
 function Contact() {
     return (
         <>
-            <p className='font-mono text-black text-5xl'>Contact</p>
-            <p className='font-mono text-black text-3xl'><Link to='/'>Home</Link></p>
-            <p className='font-mono text-black text-3xl'><Link to='/docs'>Docs</Link></p>
+            <Heading heading="Contact" />
+            <SubHeading subHeading="Home" linkTo="/" />   
+            <SubHeading subHeading="Docs" linkTo="/docs" />  
         </>
     )
 }
