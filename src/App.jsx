@@ -1,9 +1,36 @@
-import './css/index.css'; 
+import './css/index.css'
+import { useRoutes } from 'react-router-dom';
+
+import Home from './pages/Home'
+import Contact from './pages/Contact';
+import Docs from './pages/Docs';
 
 function App() {
+    let routes = useRoutes([
+        {
+            path: '/',
+            children: [
+                {
+                    index: true,
+                    element: <Home /> 
+                },
+                {
+                    path: '/contact',
+                    element: <Contact />
+                },
+                {
+                    path: '/docs',
+                    element: <Docs />
+                }
+            ]
+        }
+    ])
+
     return (
         <>
-            <p className='text-purple-400'>Hello world!</p>
+            <div className='w-full min-h-screen'>
+                {routes}
+            </div>
         </>
     )
 }
