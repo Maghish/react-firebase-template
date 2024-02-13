@@ -1,9 +1,9 @@
 import './css/index.css'
-import { useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom'
 
 import Home from './pages/Home'
-import Contact from './pages/Contact';
-import Docs from './pages/Docs';
+import Contact from './pages/Contact'
+import Docs from './pages/Docs'
 
 function App() {
     let routes = useRoutes([
