@@ -4,23 +4,19 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
 ## Table of Contents
 - [react-firebase-template](#react-firebase-template)
   - [Table of Contents](#table-of-contents)
+  - [Here are some things you need in your device before proceeding:](#here-are-some-things-you-need-in-your-device-before-proceeding)
   - [How to use/setup this template in your local device](#how-to-usesetup-this-template-in-your-local-device)
-    - [Here are some things you need in your device before proceeding:](#here-are-some-things-you-need-in-your-device-before-proceeding)
-    - [How to setup this template in your local device:](#how-to-setup-this-template-in-your-local-device)
   - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template)
-    - [Here are some things you need in your device before proceeding:](#here-are-some-things-you-need-in-your-device-before-proceeding-1)
-    - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template-1)
-      - [Create the application](#create-the-application)
-      - [Integrate Tailwind CSS](#integrate-tailwind-css)
+    - [Create the application](#create-the-application)
+    - [Integrate Tailwind CSS](#integrate-tailwind-css)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
-
-## How to use/setup this template in your local device
-### Here are some things you need in your device before proceeding:
+  
+## Here are some things you need in your device before proceeding:
 - Latest version of [Node.js](https://nodejs.org/en)
 - Latest version of [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [Git](https://git-scm.com/) (optional)
+- [Git](https://git-scm.com/) (optional) 
 
-### How to setup this template in your local device:
+## How to use/setup this template in your local device
 1. Clone this repository into your local device
 2. Navigate to the repository folder (e.g. react-firebase-template)
 3. Run `npm install`
@@ -58,19 +54,13 @@ const app = initializeApp({
     **Congratulations! You managed to successfully deploy the application globally!**
 
 ## How to setup a React app on your own like this without using this template
-### Here are some things you need in your device before proceeding:
-- Latest version of [Node.js](https://nodejs.org/en)
-- Latest version of [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [Git](https://git-scm.com/) (optional) 
 
-### How to setup a React app on your own like this without using this template
-
-#### Create the application
+### Create the application
 1. Create a React app using [Vite.js](https://vitejs.dev/) by running this command `npm create vite@latest <your-project-name> -- --template react`
 2. Navigate into the project/app directory 
 3. Run `npm install` 
 
-#### Integrate Tailwind CSS
+### Integrate Tailwind CSS
 1. Install the required dependencies using `npm install -D tailwindcss postcss autoprefixer` 
 2. Create the config files by running `npx tailwindcss init -p`
 3. Open the [`tailwind.config.js`](tailwind.config.js) and replace the entire content on the file with this:
@@ -99,7 +89,5 @@ export default {
 6. Then import the global css file in your [`App.jsx/js`](./src/App.jsx) file or any other file which is relative to it.
 
     **Now you can easily use tailwind css across the project/app and you don't need to import the global css file every time on every component/file!**
-
-    
 
 ## FAQS (Frequently asked questions)
