@@ -8,6 +8,8 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
     - [Here are some things you need in your device before proceeding:](#here-are-some-things-you-need-in-your-device-before-proceeding)
     - [How to setup this template in your local device:](#how-to-setup-this-template-in-your-local-device)
   - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template)
+    - [Here are some things you need in your device before proceeding:](#here-are-some-things-you-need-in-your-device-before-proceeding-1)
+    - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template-1)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
 
 ## How to use/setup this template in your local device
@@ -54,5 +56,12 @@ const app = initializeApp({
     Congratulations! You managed to successfully deploy the application globally!
 
 ## How to setup a React app on your own like this without using this template
+### Here are some things you need in your device before proceeding:
+- Latest version of [Node.js](https://nodejs.org/en)
+- Latest version of [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/) (optional) 
+
+### How to setup a React app on your own like this without using this template
+
 
 ## FAQS (Frequently asked questions)
