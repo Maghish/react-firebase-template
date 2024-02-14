@@ -55,7 +55,7 @@ const app = initializeApp({
         - For overwriting the index.html in `dist` directory enter `n` (*if you already ran `npm run build` and if not cancel this process and run `npm run build` and then try again*)     
 6.  After this you are only one step to deploy the application! Just run `firebase deploy` or `firebase deploy --only hosting` (*if you are in spark plan in firebase*)
 
-    Congratulations! You managed to successfully deploy the application globally!
+    **Congratulations! You managed to successfully deploy the application globally!**
 
 ## How to setup a React app on your own like this without using this template
 ### Here are some things you need in your device before proceeding:
