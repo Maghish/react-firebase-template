@@ -29,7 +29,7 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
 6. Then at the "your apps" section create a web app 
 7. Name your web app and fill in other details 
 > **💡 NOTE**  
-*don't enable firebase hosting option while creating the app, which could break this template*
+Don't enable firebase hosting option while creating the app, which could break this template
 1. Copy your app's configuration
 2. Open [`firebase.js`](./src/firebase.js) and paste the configuration in the commented area like:
 ```javascript
