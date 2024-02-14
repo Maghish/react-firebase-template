@@ -10,6 +10,8 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
   - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template)
     - [Here are some things you need in your device before proceeding:](#here-are-some-things-you-need-in-your-device-before-proceeding-1)
     - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template-1)
+      - [Create the application](#create-the-application)
+      - [Integrate Tailwind CSS](#integrate-tailwind-css)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
 
 ## How to use/setup this template in your local device
@@ -63,5 +65,41 @@ const app = initializeApp({
 
 ### How to setup a React app on your own like this without using this template
 
+#### Create the application
+1. Create a React app using [Vite.js](https://vitejs.dev/) by running this command `npm create vite@latest <your-project-name> -- --template react`
+2. Navigate into the project/app directory 
+3. Run `npm install` 
+
+#### Integrate Tailwind CSS
+1. Install the required dependencies using `npm install -D tailwindcss postcss autoprefixer` 
+2. Create the config files by running `npx tailwindcss init -p`
+3. Open the [`tailwind.config.js`](tailwind.config.js) and replace the entire content on the file with this:
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+4. You can delete all the CSS files in the project/app and create a global css file for the project/name which any name you want
+    > **💡 NOTE**  
+    You can create a separate directory (e.g. [`/src/css`](./src/css/)) and create the global css file inside it just like this template or you can just create the global css file within the [`src`](./src/) directory itself
+5. In that global css file paste this content on the top of the file
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+6. Then import the global css file in your [`App.jsx/js`](./src/App.jsx) file or any other file which is relative to it.
+
+    **Now you can easily use tailwind css across the project/app and you don't need to import the global css file every time on every component/file!**
+
+    
 
 ## FAQS (Frequently asked questions)
