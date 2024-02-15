@@ -10,6 +10,8 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
     - [Create the application](#create-the-application)
     - [Integrate Tailwind CSS](#integrate-tailwind-css)
     - [Add React Router DOM for routing](#add-react-router-dom-for-routing)
+    - [Setup test cases using React Testing Library or Jest](#setup-test-cases-using-react-testing-library-or-jest)
+    - [Create a firebase project, Integrate the firebase project to this React app \& Deploy the React app on firebase](#create-a-firebase-project-integrate-the-firebase-project-to-this-react-app--deploy-the-react-app-on-firebase)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
   
 ## Here are some things you need in your device before proceeding:
@@ -23,12 +25,12 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
 3. Run `npm install`
 4. Create a new firebase project on [firebase](https://firebase.google.com/)
 5. Then click the project settings on the project overview on the left navigation bar
-6. Then at the "your apps" section create a web app 
+6. Then at the "your apps" section, create a web app 
 7. Name your web app and fill in other details 
 > **💡 NOTE**  
 Don't enable firebase hosting option while creating the app, which could break this template
-1. Copy your app's configuration
-2. Open [`firebase.js`](./src/firebase.js) and paste the configuration in the commented area like:
+8. Copy your app's configuration
+9. Open [`firebase.js`](./src/firebase.js) and paste the configuration in the commented area like:
 ```javascript
 const app = initializeApp({
     apiKey: "...",
@@ -39,18 +41,18 @@ const app = initializeApp({
     appId: "..."
 })
 ```
-1.  Run that file using `node src/firebase.js` and after that you can ignore that file
-2.  Install firebase CLI tool by `npm install -g firebase-tools`
-3.  Login to firebase using firebase CLI tool in your environment by `firebase login`
-4.  Be sure to build the app before proceeding to the next step by using `npm run build`
-5.  Then run `firebase init` to create the project
+10.  Run that file using `node src/firebase.js` and after that you can ignore that file
+11.  Install firebase CLI tool by `npm install -g firebase-tools`
+12.  Login to firebase using firebase CLI tool in your environment by `firebase login`
+13.  Be sure to build the app before proceeding to the next step by using `npm run build`
+14.  Then run `firebase init` to create the project
     - There will be many questions to answer to create the project and you pretty solve most of them by your own but here are some main ones to know:
         - For selecting firebase services be sure to enable the first hosting option for hosting on firebase while also the second hosting option to deploy the app on every push or pull request merged to the main branch 
             > **💡 NOTE**  
             By enabling the second hosting option for Github actions will ask more questions related to your github repositories, etc but you can answer them if you have decent knowledge about Github
-        - For the build directory enter `dist` instead of `public` which is already given because since we use [Vite.js](https://vitejs.dev/) the build directory will be automatically `dist` 
+        - For the build directory enter `dist` instead of `public` which is already given because since we use [Vite.js](https://vitejs.dev/), the build directory will be automatically `dist` 
         - For overwriting the index.html in `dist` directory enter `n` (*if you already ran `npm run build` and if not cancel this process and run `npm run build` and then try again*)     
-6.  After this you are only one step to deploy the application! Just run `firebase deploy` or `firebase deploy --only hosting` (*if you are in spark plan in firebase*)
+15.  After this you are only one step to deploy the application! Just run `firebase deploy` or `firebase deploy --only hosting` (*if you are in spark plan in firebase*)
 
     **Congratulations! You managed to successfully deploy the application globally!**
 
@@ -163,5 +165,50 @@ function App() {
 ```
 
 **Awesome! You successfully setup React Router DOM! You can read the [React Router DOM documentation](https://reactrouter.com/en/main/start/tutorial) for more tools like [`Link`](https://reactrouter.com/en/main/components/link), [`useNavigate`](https://reactrouter.com/en/main/hooks/use-navigate), [`Navigate`](https://reactrouter.com/en/main/components/navigate), etc** 
+
+### Setup test cases using React Testing Library or Jest
+
+### Create a firebase project, Integrate the firebase project to this React app & Deploy the React app on firebase  
+> **❗IMPORTANT**  
+This step is already explained in [How to use/setup this template in your local device](#how-to-usesetup-this-template-in-your-local-device) and this is just a copy of that step. Plus there are many ways to achieve this, so if you find the steps unclear then you search for any tutorials on this
+1. Create an account in [firebase](https://firebase.google.com/) or if you already have a firebase account then go to console
+2. Go to console and create a new project 
+    > **💡 NOTE**  
+    Enabling Google Analytics for your project is optional depending upon your project
+3. Then click the project settings on the project overview on the left navigation bar
+4. Then at the "your apps" section, create a web app 
+5. Name your web app and fill in other details
+   > **💡 NOTE**  
+   Don't enable firebase hosting option while creating the app, which could break this template
+6.  Copy your app's configuration
+7.  Create a javascript file within [`./src/`](./src/) directory, you can name it whatever you want
+8.  Paste this inside the file and also replace the app configuration with your app's configuration:
+```javascript
+import { initializeApp } from 'firebase/app'
+
+const app = initializeApp({
+    apiKey: "...",
+    authDomain: "...",
+    projectId: "...",
+    storageBucket: "...",
+    messagingSenderId: "...",
+    appId: "..."
+})
+```
+9. Run that file using `node src/<file-name>.js` and after that you can ignore that file
+10.  Install firebase CLI tool by `npm install -g firebase-tools`
+11.  Login to firebase using firebase CLI tool in your environment by `firebase login`
+12.  Be sure to build the app before proceeding to the next step by using `npm run build`
+13.  Then run `firebase init` to create the project
+    - There will be many questions to answer to create the project and you pretty solve most of them by your own but here are some main ones to know:
+        - For selecting firebase services be sure to enable the first hosting option for hosting on firebase while also the second hosting option to deploy the app on every push or pull request merged to the main branch 
+            > **💡 NOTE**  
+            By enabling the second hosting option for Github actions will ask more questions related to your github repositories, etc but you can answer them if you have decent knowledge about Github
+        - For the build directory enter `dist` instead of `public` which is already given because since we use [Vite.js](https://vitejs.dev/), the build directory will be automatically `dist` 
+        - For overwriting the index.html in `dist` directory enter `n` (*if you already ran `npm run build` and if not cancel this process and run `npm run build` and then try again*)     
+14.  After this you are only one step to deploy the application! Just run `firebase deploy` or `firebase deploy --only hosting` (*if you are in spark plan in firebase*)
+
+    **Congratulations! You have successfully deployed the application globally!**
+
 
 ## FAQS (Frequently asked questions)
