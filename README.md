@@ -9,6 +9,7 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
   - [How to setup a React app on your own like this without using this template](#how-to-setup-a-react-app-on-your-own-like-this-without-using-this-template)
     - [Create the application](#create-the-application)
     - [Integrate Tailwind CSS](#integrate-tailwind-css)
+    - [Add React Router DOM for routing](#add-react-router-dom-for-routing)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
   
 ## Here are some things you need in your device before proceeding:
@@ -79,8 +80,8 @@ export default {
 ```
 4. You can delete all the CSS files in the project/app and create a global css file for the project/name which any name you want
     > **💡 NOTE**  
-    You can create a separate directory (e.g. [`/src/css`](./src/css/)) and create the global css file inside it just like this template or you can just create the global css file within the [`src`](./src/) directory itself
-5. In that global css file paste this content on the top of the file
+    You can create a separate directory (e.g. [`/src/css`](./src/css/)) and create the global css file inside it just like this template or you can just create the global css file within the [`./src`](./src/) directory itself
+5. In that global css file paste this content on the top of the file:
 ```css
 @tailwind base;
 @tailwind components;
@@ -89,5 +90,78 @@ export default {
 6. Then import the global css file in your [`App.jsx/js`](./src/App.jsx) file or any other file which is relative to it.
 
     **Now you can easily use tailwind css across the project/app and you don't need to import the global css file every time on every component/file!**
+
+### Add React Router DOM for routing
+1. Install the required dependency using `npm install react-router-dom`
+    > **💡 NOTE**  
+    Remember the way we setup and use react router dom might be different from any other ordinary methods to use react router dom. You can still use any other method but we use our own method to use react router dom.
+2. Create your pages in a separate directory on [`./src`](./src/) directory (e.g. [`./src/pages`](./src/pages/)) or you can just store them wherever you want inside the [`./src`](./src/) directory. 
+    > **💡 NOTE**  
+    You can create those pages just like any other jsx component. For example:
+```javascript
+export default function Home() {
+    return (
+        <div>Home</div>
+    )
+}
+ ```
+3. Open the [`App.jsx/js`](./src/App.jsx) file or any other file relevant to that
+4. Import `useRoutes` from `react-router-dom`
+5. Paste this snippet inside the file's main function:
+```javascript
+let routes = useRoutes([
+    {
+        path: '/',
+        children: [
+            {
+                index: true,
+                element: <Home />
+            },
+            {
+                path: '/page2',
+                element: <Page2 />
+            },
+            {
+                path: '/page3',
+                element: <Page3 />
+            }
+        ]
+    }
+])
+```
+6. And return the `routes` in the main function and finally the main function should look like this:
+```javascript
+function App() {
+    let routes = useRoutes([
+        {
+            path: '/',
+            children: [
+                {
+                    index: true,
+                    element: <Home />
+                },
+                {
+                    path: '/page2',
+                    element: <Page2 />
+                },
+                {
+                    path: '/page3',
+                    element: <Page3 />
+                }
+            ]
+        }
+    ])
+
+    return (
+        <>
+            <div className='w-full min-h-screen'>
+                {routes}
+            </div>
+        </>
+    )
+}
+```
+
+**Awesome! You successfully setup React Router DOM! You can read the [React Router DOM documentation](https://reactrouter.com/en/main/start/tutorial) for more tools like [`Link`](https://reactrouter.com/en/main/components/link), [`useNavigate`](https://reactrouter.com/en/main/hooks/use-navigate), [`Navigate`](https://reactrouter.com/en/main/components/navigate), etc** 
 
 ## FAQS (Frequently asked questions)
