@@ -1,5 +1,5 @@
 # react-firebase-template
-This is a React app template, with [Firebase SDK](https://firebase.google.com/docs/firestore/client/libraries) for backend services (i.e. cloud functions, etc), [Tailwind CSS](https://tailwindcss.com/) for Styling, [Vite.js](https://vitejs.dev/) for building, [React Router Dom](https://reactrouter.com/en/main) for routing, [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Jest](https://jestjs.io/) for testing and finally [Firebase's hosting service](https://firebase.google.com/docs/hosting) for deployment.
+This is a React app template, with [Firebase SDK](https://firebase.google.com/docs/firestore/client/libraries) for backend services (i.e. cloud functions, etc), [Tailwind CSS](https://tailwindcss.com/) for Styling, [Vite.js](https://vitejs.dev/) for building, [React Router Dom](https://reactrouter.com/en/main) for routing, [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Jest](https://jestjs.io/) for testing and finally [Firebase's hosting service](https://firebase.google.com/docs/hosting) for deployment. You can easily clone this repository into your local device and setup a new firebase project and deploy the app on firebase with ease! 
 
 ## Table of Contents
 - [react-firebase-template](#react-firebase-template)
@@ -13,9 +13,7 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
     - [Setup test cases using React Testing Library or Jest](#setup-test-cases-using-react-testing-library-or-jest)
     - [Create a firebase project, Integrate the firebase project to this React app \& Deploy the React app on firebase](#create-a-firebase-project-integrate-the-firebase-project-to-this-react-app--deploy-the-react-app-on-firebase)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
->>>>>>> parent of 857ab44 (Update README.md pt-8)
-  - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
-  
+
 ## Here are some things you need in your device before proceeding:
 - Latest version of [Node.js](https://nodejs.org/en)
 - Latest version of [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
@@ -214,3 +212,10 @@ const app = initializeApp({
 
 
 ## FAQS (Frequently asked questions)
+
+
+<div align='right'>
+
+*Lastly updated at 2024/02/16*
+
+</div>
