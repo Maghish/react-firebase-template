@@ -206,9 +206,9 @@ const app = initializeApp({
             By enabling the second hosting option for Github actions will ask more questions related to your github repositories, etc but you can answer them if you have decent knowledge about Github
         - For the build directory enter `dist` instead of `public` which is already given because since we use [Vite.js](https://vitejs.dev/), the build directory will be automatically `dist` 
         - For overwriting the index.html in `dist` directory enter `n` (*if you already ran `npm run build` and if not cancel this process and run `npm run build` and then try again*)     
-14.  After this you are only one step to deploy the application! Just run `firebase deploy` or `firebase deploy --only hosting` (*if you are in spark plan in firebase*)
+14.  After this you are only one step to deploy the application! Just run `firebase deploy` or `firebase deploy --only hosting` (*if you are in spark plan in firebase*).
 
-    **Congratulations! You have successfully deployed the application globally!**
+**Congratulations! You have successfully deployed the application globally!**
 
 
 ## FAQS (Frequently asked questions)
