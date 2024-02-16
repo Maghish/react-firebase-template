@@ -13,6 +13,8 @@ This is a React app template, with [Firebase SDK](https://firebase.google.com/do
     - [Setup test cases using React Testing Library or Jest](#setup-test-cases-using-react-testing-library-or-jest)
     - [Create a firebase project, Integrate the firebase project to this React app \& Deploy the React app on firebase](#create-a-firebase-project-integrate-the-firebase-project-to-this-react-app--deploy-the-react-app-on-firebase)
   - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
+>>>>>>> parent of 857ab44 (Update README.md pt-8)
+  - [FAQS (Frequently asked questions)](#faqs-frequently-asked-questions)
   
 ## Here are some things you need in your device before proceeding:
 - Latest version of [Node.js](https://nodejs.org/en)
@@ -82,8 +84,8 @@ export default {
 ```
 4. You can delete all the CSS files in the project/app and create a global css file for the project/name which any name you want
     > **💡 NOTE**  
-    You can create a separate directory (e.g. [`/src/css`](./src/css/)) and create the global css file inside it just like this template or you can just create the global css file within the [`./src`](./src/) directory itself
-5. In that global css file paste this content on the top of the file:
+    You can create a separate directory (e.g. [`/src/css`](./src/css/)) and create the global css file inside it just like this template or you can just create the global css file within the [`src`](./src/) directory itself
+5. In that global css file paste this content on the top of the file
 ```css
 @tailwind base;
 @tailwind components;
